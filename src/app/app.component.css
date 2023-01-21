@@ -1,0 +1,17 @@
+.all-content{
+  width: 70vw;
+  margin: auto;
+  text-align: justify;
+}
+
+.container{
+  margin:5vw;
+  background-color: aliceblue;
+}
+.nombre{
+  background-color: magenta;
+}
+
+*{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

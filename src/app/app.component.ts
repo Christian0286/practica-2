@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'practica-2';
+  data:any = {
+    address:String,
+    city:String,
+    state:String,
+    website:String,
+    flickr:String,
+    twitter:String,
+    elon_twitter:String,
+  };
+
+    constructor(private http:HttpClient){
+    }
+    ngOnInit(){
+      this.http.get('https://api.spacexdata.com/v4/company').subscribe((data:any)=>{this.data=data;});
+
+    }
+
+
 }
